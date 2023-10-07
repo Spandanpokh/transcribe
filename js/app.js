@@ -209,13 +209,13 @@ async function queryTranscription(audioBlob) {
 
         transcriptionResultDiv.textContent = text;
 
-        if (response.status === 200) {
-            return text;
-        }
+        // Always return the response, even if the status is not 200
+        return text;
     } catch (error) {
         console.error("Error:", error);
+        // If an error occurs, you may want to return an error message or handle it differently
+        return "An error occurred while processing the transcription.";
     } finally {
         isRequestInProgress = false;
     }
 }
-
