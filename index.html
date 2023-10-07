@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Recording and Transcription</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Audio Recording and Transcription</h1>
+    <div style="max-width: 28em;">
+        <p>Convert recorded audio to:</p>
+        <select id="encodingTypeSelect">
+            <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
+        </select>
+        <div id="controls">
+            <button id="recordButton">Record</button>
+            <button id="stopButton" disabled>Stop</button>
+        </div>
+        <div id="formats"></div>
+        <pre>Log</pre>
+        <pre id="log"></pre>
+
+        <pre>Recordings</pre>
+        <ol id="recordingsList"></ol>
+    </div>
+
+    <form id="transcriptionForm" enctype="multipart/form-data">
+        <input type="hidden" id="audioData" name="audioData" />
+        <!-- <button type="button" id="transcribeButton">Transcribe</button> -->
+    </form>
+    <div id="transcriptionResult"></div>
+
+    <script src="js/WebAudioRecorder.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
