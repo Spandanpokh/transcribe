@@ -195,7 +195,7 @@ async function queryTranscription(audioBlob) {
     formData.append("audio", audioBlob);
 
     try {
-        const response = await fetch("https://api-inference.huggingface.co/models/openai/whisper-medium", {
+        const response = await fetch("https://api-inference.huggingface.co/models/openai/whisper-large", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer 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"
